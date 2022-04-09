@@ -322,9 +322,11 @@ end
 
 function deliverStuff(activeDelivery)
     if deliveryTimeout > 0 then
-        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+		ExecuteCommand('e c')
+        --ExecuteCommand('e c')
         Wait(500)
-        TriggerEvent('animations:client:EmoteCommandStart', {"bumbin"})
+		ExecuteCommand('e bumbin')
+       -- TriggerEvent('animations:client:EmoteCommandStart', {"bumbin"})
         checkPedDistance()
         QBCore.Functions.Progressbar("work_dropbox", Lang:t("info.delivering_products"), 3500, false, true, {
             disableMovement = true,
